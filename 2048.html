@@ -1,0 +1,32 @@
+<!doctype html>
+ <head>
+  <title> new document </title>
+  <meta charset="utf-8">
+   <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<link rel="stylesheet" href="css/2048.css">
+	<style type="text/css">
+	
+	</style>
+ </head>
+	
+ <body>
+	<p >
+		Top:<span id="top">0</span><br/>
+		Score:<span id="score">0</span>
+	</p>
+	<div id="gridPanel">
+	</div>
+	<div id="gameOver">
+			<div >   <!--满屏背景色--></div>
+			<p>
+				Game Over<br>
+				Score:<span id="fscore"></span><br>
+				<a class="btn" onclick="game.start()">Try Again</a>
+			</p>
+		
+	</div>
+   <script src="js/animation.js"></script>
+	 <script src="js/2048.js"></script>
+ </body>
+</html>

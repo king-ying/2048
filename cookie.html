@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cookie</title>
+</head>
+<body>
+<script>
+function setCookie(cname,val){
+	var date=new Date();
+	date.setDate(date.getDate()+14);
+	document.cookie=cname+"="+val+";expires="+
+				date.toGMTString();
+}
+setCookie("username","zhangdong")
+function getCookie(cname){
+				var str=document.cookie;
+				var i=str.indexOf(cname);
+				if (i!=-1)
+				{
+					i=i+cname.length+1;
+					var endi=str.indexOf(";",i);
+					if (endi==-1)
+					{
+						return str.slice(i,str.length);  
+					}else{
+						return str.slice(i,endi);
+					}
+				}else{
+					return undefined;
+				}
+		}
+		console.log(
+		getCookie("username"),  //zhangdong
+		getCookie("top")   //undefined
+		);
+		//Firefox  查看
+</script>
+</body>
+</html>
